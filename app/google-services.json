@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "308024344753",
+    "firebase_url": "https://donationaapp.firebaseio.com",
+    "project_id": "donationaapp",
+    "storage_bucket": "donationaapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308024344753:android:d8eea9af3594e254",
+        "android_client_info": {
+          "package_name": "com.elhady.donation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308024344753-8qbpa5i5cbdmuoujqc2g1he3m8456rkp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.elhady.donation",
+            "certificate_hash": "d32a5db4dfafdeaa1b665d1d443121f5ac3948e8"
+          }
+        },
+        {
+          "client_id": "308024344753-3740g65nsmp2ifms4lv8qgqtuo16sevu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC65hMDTwTxwGi06me2xfFHuK9KcqR-b1o"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308024344753-3740g65nsmp2ifms4lv8qgqtuo16sevu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
