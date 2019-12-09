@@ -33,6 +33,10 @@
             android:name="com.elhady.donation.SignupActivity"
             android:label="@string/title_activity_login"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.elhady.donation.ResetPasswordActivity"
+            android:label="@string/title_activity_reset_password"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 
 </manifest>
