@@ -49,7 +49,6 @@
                 android:layout_height="wrap_content"
                 android:focusableInTouchMode="true"
                 android:hint="@string/hint_password"
-                android:imeActionId="@+id/login"
                 android:imeOptions="actionUnspecified"
                 android:inputType="textPassword"
                 android:maxLines="1"
