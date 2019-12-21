@@ -47,6 +47,36 @@ public class DrugsList extends AppCompatActivity {
         }
     }
 
+    private void loadListDrugs(String categoryId) {
+        adapter = new FirebaseRecyclerAdapter<Drugs, DrugsViewHolder>(Drugs.class,
+                R.layout.drugs_item,
+                DrugsViewHolder.class,
+                drugsList.orderByChild("MenuId").equalTo(categoryId) // like: Select * from foods where mneu Id
+        ) {
+            @Override
+            protected void populateViewHolder(DrugsViewHolder viewHolder, Drugs model, int position) {
+                viewHolder.drugs_name.setText(model.getName());
+                Picasso.with(getBaseContext()).load(model.getImage())
+                        .into(viewHolder.drugs_image);
+
+                final Drugs local = model;
+                viewHolder.setItemClickListener(new ItemClickListener() {
+                    @Override
+
+                    public void onClick(View view, int position, boolean isLongClick) {
+                        //Start new activity
+                        Intent drugsDetail = new Intent(DrugsList.this,DrugsDetail.class);
+                        drugsDetail.putExtra("DrugsId",adapter.getRef(position).getKey());
+                        startActivity(drugsDetail);
+                    }
+                });
+
+            }
+        };
+        //Set adapter
+        recyclerView.setAdapter(adapter);
+    }
+
 
 }
 
