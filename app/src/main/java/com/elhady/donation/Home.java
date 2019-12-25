@@ -88,9 +88,9 @@ public class Home extends AppCompatActivity
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
                         //Get CategoryId and sent to new Activity
-                        Intent drugsList = new Intent(Home.this,DrugsList.class);
+                        Intent drugsList = new Intent(Home.this, DrugsList.class);
                         //Because CategoryId is key , so we just get key of this item
-                        drugsList.putExtra("CategoryId",adapter.getRef(position).getKey());
+                        drugsList.putExtra("CategoryId", adapter.getRef(position).getKey());
                         startActivity(drugsList);
                     }
                 });
@@ -99,4 +99,49 @@ public class Home extends AppCompatActivity
         recycler_menu.setAdapter(adapter);
     }
 
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.home, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    @SuppressWarnings("StatementWithEmptyBody")
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+
+        if (id == R.id.nav_menu) {
+            // Handle the camera action
+        } else if (id == R.id.nav_cart) {
+
+        } else if (id == R.id.nav_orders) {
+
+        } else if (id == R.id.nav_log_out) {
+
+        }
+
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
 }
+
+
